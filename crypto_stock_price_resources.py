@@ -7,7 +7,7 @@ import yfinance as yf
 # Create MCP Server
 # ============================================================
 
-mcp = MCPServer("crypto-stock-price", host="0.0.0.0",port=8000)
+mcp = MCPServer("crypto-stock-price")
 
 
 # ============================================================
@@ -236,4 +236,5 @@ Clearly distinguish current data from general analysis.
 
 if __name__ == "__main__":
     #mcp.run()
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="streamable-http",host="0.0.0.0",
+        port=8000)
